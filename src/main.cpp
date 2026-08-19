@@ -30,10 +30,8 @@ static Preferences g_prefs;
 
 // ---- Shared Secret: IDENTISCH mit RF_SECRET (Flipper) und UKFE_SECRET (Heltec) ----
 // Out-of-band pairen; Pairing-Bytes vor Produktivnutzung ersetzen.
-static const uint8_t RELAY_SECRET[UKFE_RF_SECRET_LEN] = {
-    0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77,   // "G4MEOVER"
-    0x88, 0x99, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF,   // Pairing-Bytes (ersetzen!)
-};
+#include "secret.h"
+static const uint8_t RELAY_SECRET[UKFE_RF_SECRET_LEN] = UKFE_RF_SECRET_INIT;
 
 static const uint8_t BROADCAST_MAC[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 

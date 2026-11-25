@@ -1,5 +1,7 @@
 # G4MEOVER WiFi-Relay (ESP32-WROOM)
 
+[![CI](https://github.com/G4MEOVER18/g4meover-wifi-relay/actions/workflows/platformio-build.yml/badge.svg)](https://github.com/G4MEOVER18/g4meover-wifi-relay/actions/workflows/platformio-build.yml)
+
 Der **WROOM als WiFi-Koordinator** des G4MEOVER-Ökosystems. Nimmt die signierten
 `ukfe_rf`-Befehle des Flipper über **GPIO-UART** entgegen, verifiziert sie
 (keyed MAC + CRC16 + Rolling-Counter) und **rebroadcastet** sie per **ESP-NOW**
